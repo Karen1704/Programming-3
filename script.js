@@ -4,23 +4,21 @@ var satanaArr = [];
 var gishatichArr = [];
 var grassEatArr = [];
 var grassArr = [];
-var side = 25;
+var side = 20;
 var matrix = [];
-var n = 25;
+var n = 30;
 
 
-var exanak = [1, 2, 3, 4];
-var exanak2 = ["Garun", "Amar", "Ashun", "Dzmer"];
-var ex = prompt("Grel exanak  1=Garun  ,2=Amar, 3=Ashun,  4=Dzmer  ");
-document.write(exanak2[parseInt(ex) - 1]);
-var currentEgh = exanak2[parseInt(ex) - 1];
-var day = 0
+var exanak = ["Garun", "Amar", "Ashun", "Dzmer","Garun", "Amar", "Ashun", "Dzmer"];
+var ex = prompt("Grel exanak  1=Garun,2=Amar,3=Ashun,4=Dzmer");
+var currentEgh = exanak[parseInt(ex) - 1];
+var days = 0
 // var matrix = [
 //     [0, 0, 0, 0, 0],
 //     [1, 0, 3, 0, 0],
 //     [0, 0, 0, 0, 0],
 //     [0, 0, 2, 4, 0],
-//     [0, 0, 0, 0, 5],
+//     [0, 0, 0, 0, 5],  
 //     [0, 0, 0, 0, 0],
 //     [0, 0, 0, 0, 0]
 //     [0, 0, 0, 0, 0],
@@ -82,25 +80,25 @@ function setup() {
 
 
 function draw() {
-    day++
-    if (day < 100) {
-        currentEgh = exanak2[parseInt(ex) - 1];
+    days+=2;
+    if (days < 100) {
+        currentEgh = exanak[parseInt(ex) - 1];
 
     }
-    else if(day > 100 && day < 200) {
-        currentEgh = exanak2[parseInt(ex)];
+    else if(days > 100 && days < 200) {
+        currentEgh = exanak[parseInt(ex)];
 
     }
-    else if (day > 200 && day <300) {
-        currentEgh = exanak2[parseInt(ex) +1];
+    else if (days > 200 && days <300) {
+        currentEgh = exanak[parseInt(ex) +1];
 
     }
-    else if (day >300 && day< 400) {
-        currentEgh = exanak2[parseInt(ex) + 2];
+    else if (days >300 && days< 400) {
+        currentEgh = exanak[parseInt(ex) + 2];
 
     }
-    else if (day > 400) {
-        day=0;
+    else if (days > 400) {
+        days=0;
 
     }
 
@@ -177,13 +175,10 @@ function draw() {
     }
 
 
-
-
-
-
-
-
 }
+
+document.write(currentEgh);
+
 //console.log(grassArr);
 
 

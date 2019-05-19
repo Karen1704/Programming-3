@@ -1,4 +1,5 @@
-class Amenaker extends Base{
+const  Base  = require("./class.base.js")
+module.exports = class Amenaker extends Base{
     constructor(x,y){
         super(x,y);
         this.energy=8;

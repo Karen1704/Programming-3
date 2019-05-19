@@ -1,4 +1,5 @@
-class GrassEater  extends Base {
+const  Base  = require("./class.base.js")
+module.exports = class GrassEater  extends Base {
     constructor(x,y){
         super(x,y);
         this.energy=8;

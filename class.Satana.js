@@ -1,4 +1,5 @@
-class Satana extends Base {
+const  Base  = require("./class.base.js")
+module.exports = class Satana extends Base {
     constructor(x,y){
         super(x,y);
         this.energy=8;

@@ -1,4 +1,5 @@
-class Grass extends Base {
+const  Base  = require("./class.base.js")
+ module.exports = class Grass extends Base {
     constructor(x, y) {
         super(x,y);
         this.directions = [
